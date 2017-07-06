@@ -1,0 +1,25 @@
+{
+  "name": "serenity-peaks",
+  "version": "1.0.0",
+  "description": "serenity-peaks",
+  "main": "index.js",
+  "scripts": {
+    "serve": "muleify serve -w src dist",
+    "build": "rm -r docs/* && muleify pack src docs",
+    "cp": "cp node_modules/jenie/dist/jenie.polly.min.js src/assets/js/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebCab-Design/peaks-recovery.git"
+  },
+  "author": "WebCab",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/WebCab-Design/peaks-recovery/issues"
+  },
+  "homepage": "https://github.com/WebCab-Design/peaks-recovery#readme",
+  "dependencies": {
+    "astatine": "^1.2.0",
+    "flexboxgrid": "^6.3.1"
+  }
+}
