@@ -1,12 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  color: #444444;
+  color: #444;
   font-size: 16px;
-  transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -webkit-transition: all 300ms ease;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
   font-family: 'Open Sans', sans-serif;
 }
 body {
@@ -19,8 +17,9 @@ footer {
   overflow-x: hidden;
 }
 section {
-  padding: 6%;
-  box-sizing: border-box;
+  margin: auto;
+  padding: 3rem 0;
+  max-width: 60rem;
 }
 section h3 {
   margin: 2rem auto;
@@ -144,8 +143,8 @@ cite {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 3px;
+  padding: 1rem 2rem;
   text-transform: uppercase;
-  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .light-neutral {
   color: #382e70;
@@ -290,11 +289,16 @@ cite {
   width: 100%;
 }
 .contact-widget {
-  margin: 8px;
-  padding: 8px;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #1097b6;
+}
+.contact-widget a,
+.contact-widget p,
+.contact-widget strong {
+  color: #fff;
 }
 .brochure-widget {
   margin: 8px;
@@ -351,10 +355,19 @@ cite {
 .boxes p {
   text-align: left;
 }
-.contact-section {
+.contact-information-section > h1 {
+  color: #382e70;
+  text-align: center;
+}
+.contact-information-section > div {
+  margin: auto;
+  display: block;
+}
+.contact-form-section {
+  padding: 1rem;
   background: rgba(56, 46, 112, 0.4);
 }
-.contact-section span {
+.contact-form-section span {
   color: #382e70;
   font-weight: 100;
   font-size: 1.5rem;
@@ -364,9 +377,13 @@ cite {
 }
 .profiles {
   width: 100%;
+  margin: 2rem auto;
 }
 .profiles img {
   width: 100% !important;
+}
+.profiles > div > div {
+  max-width: 300px;
 }
 .bio-name {
   background: #382e70;
@@ -498,10 +515,11 @@ form input,
 form textarea {
   width: 100%;
   border: none;
+  max-width: 100%;
   padding: 0.5rem;
+  transition: none;
   margin: 1rem auto;
   box-sizing: border-box;
-  border-bottom: 1px solid #cccccc;
 }
 form input[type="submit"] {
   width: auto;
@@ -524,7 +542,7 @@ form img:hover {
   -webkit-filter: grayscale(0);
 }
 fieldset {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 1rem;
 }
 legend {
@@ -559,10 +577,10 @@ legend {
 .article-thumb a.box h3 {
   font-weight: 100;
   text-align: left;
-  color: #444444;
+  color: #444;
 }
 .article-thumb h1 {
-  color: #444444 !important;
+  color: #444 !important;
   font-weight: lighter;
 }
 .cat-thumb {
@@ -590,7 +608,7 @@ legend {
 .cat-thumb a.box h3 {
   font-weight: 100;
   text-align: left;
-  color: #444444;
+  color: #444;
   font-size: 1rem;
   margin: 0;
 }
@@ -598,7 +616,7 @@ legend {
   font-size: 0.7rem;
 }
 .cat-thumb h1 {
-  color: #444444 !important;
+  color: #444 !important;
   font-weight: lighter;
 }
 .full-article {
@@ -616,7 +634,7 @@ legend {
   object-fit: cover;
 }
 .full-article > .article-box h1 {
-  color: #444444;
+  color: #444;
   font-weight: 100;
 }
 .full-article > .article-box a {
@@ -652,6 +670,9 @@ footer > div {
 }
 .img-100 {
   width: 100%;
+}
+.webcab-logo {
+  height: 30px;
 }
 @media screen and (max-width: 1030px) {
   .title-wrap h1 {
