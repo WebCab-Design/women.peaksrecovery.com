@@ -16,24 +16,14 @@
 	font-family: 'Open Sans', sans-serif;
 }
 body {
-	background: white;
+	background: @white;
 }
 body, main, footer {
 	width: 100%;
 	overflow-x: hidden;
 }
-section {
-	// padding: 6%;
-	margin: auto;
-	padding: 3rem 0;
-	max-width: 60rem;
-}
-section h3 {
-	margin: 2rem auto;
-	text-align: center;
-}
 p {
-	margin: 8px 0;
+	margin: 1rem 0;
 }
 ul {
 	margin-left: 1.5rem;
@@ -50,13 +40,16 @@ hr {
 	border: solid 0.5px @light-neutral;
 }
 h1 {
-	color: white;
+	color: @white;
 	font-size: 2.5em;
 }
 h2 {
-	color: white;
+	color: @white;
 	font-size: 2em;
 	font-weight: 100;
+	strong {
+		color: @white;
+	}
 }
 h3 {
 	color: @primary;
@@ -71,9 +64,6 @@ header {
 	display: block;
 	position: relative;
 	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
-	img {
-		width: 100%;
-	}
 }
 blockquote {
 	font-size: 1.3rem;
@@ -86,6 +76,19 @@ cite {
 	color: #cacaca;
 	font-weight: lighter;
 }
+textarea {
+	max-width: 100%;
+	transition: none;
+}
+.content {
+	margin: auto;
+	padding: 3rem 0;
+	max-width: 60rem;
+}
+.content h3 {
+	margin: 2rem auto;
+	text-align: center;
+}
 // logo
 .logo {
     width: 25%;
@@ -93,10 +96,13 @@ cite {
 	display: inline-block;
     vertical-align: middle;
 	box-sizing: border-box;
+	img {
+		height: 75px;
+	}
 }
 // connect
 .connect a, .connect span {
-	color: white;
+	color: @white;
 }
 .connect a {
 	padding: 6px;
@@ -141,13 +147,13 @@ cite {
 	}
 }
 .nav-list-main {
-	background: white;
+	background: @white;
 	text-align: right !important;
 }
 .nav-list-sub {
 	z-index: 1;
 	min-width: 250px;
-	background: white;
+	background: @white;
 	box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
 }
 // buttons
@@ -194,7 +200,7 @@ cite {
 	margin-top: -2.3rem;
 	text-transform: uppercase;
 	a {
-		color: white;
+		color: @white;
 		padding: 1rem;
 		border-radius: 4px;
 		background: @primary;
@@ -255,7 +261,7 @@ cite {
 		margin-top: 100px;
 	}
 	h1, h2 {
-		color: white;
+		color: @white;
 		text-shadow: 0px 0px 5px #000;
 	}
 }
@@ -285,7 +291,7 @@ cite {
 		box-sizing: border-box;
 	}
 	h1, h2 {
-		color: white;
+		color: @white;
 		padding: 1rem;
 		font-weight: normal;
 	}
@@ -305,10 +311,10 @@ cite {
 	width: 100%;
 }
 .contact-widget {
-	margin: 1rem;
-	padding: 1rem;
+	margin: 0.5rem;
+	padding: 0.5rem;
 	text-align: center;
-	border-radius: 0.5rem;
+	border-radius: 4px;
 	background: @secondary;
 	a, p, strong {
 		color: @white;
@@ -321,31 +327,30 @@ cite {
 	text-align: center;
 	border-radius: 8px;
 	p {
-		color: white;
+		color: @white;
 		margin: 4px auto;
 		font-weight: 100;
 	}
 	h3 {
-		color: white;
+		color: @white;
 	}
 	a {
 		text-decoration: none;
 	}
 }
 .paralax {
+	padding: 6%;
 	text-align: center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	p {
-		color: white;
+		color: @white;
 		margin: auto;
 	}
 	h3 {
-		color: white;
+		color: @white;
 		margin: 1rem;
 	}
 }
@@ -370,7 +375,13 @@ cite {
 	    text-align: left;
 	}
 }
-.contact-information-section {
+// verify-insurance
+.verify-insurance {
+	input, textarea {
+		border-bottom: solid 1px lightgray;
+	}
+}
+.contact-information {
 	> h1 {
 		color: #382e70;
 		text-align: center;
@@ -380,10 +391,9 @@ cite {
 		display: block;
 	}
 }
-.contact-form-section {
+.contact-form {
 	padding: 1rem;
 	background: fade(@primary, 40%);
-	// background: rgba(@primary, 0.4);
 	span {
 		color: @primary;
 		font-weight: 100;
@@ -409,7 +419,7 @@ cite {
 	padding: 0.5rem;
 	margin-top: -5px;
 	h4, p {
-		color: white;
+		color: @white;
 		font-weight: 300;
 	}
 }
@@ -441,7 +451,7 @@ cite {
 		max-width: 80%;
 		max-height: 80%;
 		overflow-y: auto;
-		background: white;
+		background: @white;
 		padding: 2rem;
 		width: 50%;
 		box-shadow: 0 3px 9px rgba(0, 0, 0, 0.6);
@@ -472,7 +482,7 @@ cite {
 		max-height: 150px;
 		border-radius: 3px;
 		display: inline-block;
-		border: solid 3px white;
+		border: solid 3px @white;
 		box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 		&:hover {
 			border: solid 3px @primary;
@@ -485,7 +495,7 @@ cite {
 	margin-top: 2rem;
 	text-align: center;
 	div, h3, p, a, strong, span {
-		color: white;
+		color: @white;
 	}
 	> div {
 		padding: 1rem;
@@ -665,7 +675,7 @@ legend {
 	}
 }
 .featured-box {
-	background: white;
+	background: @white;
 	> div {
 		padding: 0;
 		img {
@@ -679,7 +689,7 @@ legend {
 
 // footer
 footer p, footer a, footer div {
-	color: white;
+	color: @white;
 }
 footer > div:nth-child(1) {
 	color: @primary;
