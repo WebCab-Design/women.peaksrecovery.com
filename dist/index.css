@@ -11,6 +11,7 @@ body {
   background: #fff;
 }
 body,
+header,
 main,
 footer {
   width: 100%;
