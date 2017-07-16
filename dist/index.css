@@ -306,6 +306,7 @@ textarea {
 .contact-widget p,
 .contact-widget strong {
   color: #fff;
+  margin: 0;
 }
 .brochure-widget {
   margin: 8px;
