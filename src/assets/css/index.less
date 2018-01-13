@@ -1,8 +1,8 @@
-$primary: #382e70;
-$secondary: #1097b6;
-$light-neutral: #dddddd;
-$neutral: #cccccc;
-$main-image: 'http://res.cloudinary.com/dbc2wlvk8/image/upload/b_rgb:1097b6,c_fill,e_blur:1174,h_1170,o_90,w_1900/v1484148385/peaks/peaks-centers/Serenity-Peaks-Recovery-Garden-of-the-Gods_kndldz.jpg';
+@primary: #382e70;
+@secondary: #1097b6;
+@light-neutral: #dddddd;
+@neutral: #cccccc;
+@main-image: 'http://res.cloudinary.com/dbc2wlvk8/image/upload/b_rgb:1097b6,c_fill,e_blur:1174,h_1170,o_90,w_1900/v1484148385/peaks/peaks-centers/Serenity-Peaks-Recovery-Garden-of-the-Gods_kndldz.jpg';
 
 * {
 	margin: 0;
@@ -34,7 +34,7 @@ section:nth-of-type(1) {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url($main-image);
+	background-image: url(@main-image);
 
 	display: -webkit-box;
 	display: -moz-box;
@@ -58,7 +58,7 @@ section:nth-of-type(1) {
 	flex-direction: column;
 }
 section:nth-of-type(1) div:nth-child(1) {
-	background: radial-gradient(rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 45%, transparent 70%);
+	// background: radial-gradient(rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 45%, transparent 70%);
 }
 section:nth-of-type(1) img {
 	width: 100%;
@@ -70,10 +70,10 @@ section:nth-of-type(1) h1, main section:nth-of-type(1) h2 {
 	text-shadow: 0 3px 6px rgba(0,0,0,0.6);
 }
 section:nth-of-type(1) h1 {
-	color: $primary;
+	color: @primary;
 }
 section:nth-of-type(1) h2 {
-	color: $secondary;
+	color: @secondary;
 }
 section {
 	padding: 6%;
@@ -107,7 +107,7 @@ h2 {
 	font-weight: 100;
 }
 h3 {
-	color: $primary;
+	color: @primary;
 	font-size: 1.5em;
 	margin: 1rem auto;
 	text-align: center;
@@ -119,12 +119,12 @@ h3 {
 .connect a {
 	padding: 6px;
 	color: white;
-	background: rgba($primary, 0.6);
+	// background: rgba(@primary, 0.6);
 }
 .connect a:hover {
 	background: none;
 	box-sizing: border-box;
-	background: rgba($primary, 0.3);
+	// background: rgba(@primary, 0.3);
 }
 .connect > div:nth-child(1) > a:nth-child(1) {
 	padding: 10px;
@@ -177,36 +177,36 @@ h3 {
 	padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .light-neutral {
-	color: $primary;
-	background: $light-neutral;
+	color: @primary;
+	background: @light-neutral;
 	&:hover {
-		background: lighten($light-neutral, 10%);
+		background: lighten(@light-neutral, 10%);
 	}
 }
 .primary {
-	background: $primary;
-	color: $light-neutral;
+	background: @primary;
+	color: @light-neutral;
 	&:hover {
-		background: lighten($primary, 10%);
+		background: lighten(@primary, 10%);
 	}
 }
 
 // panels/tabs
 .tabs {
-	background: $light-neutral;
+	background: @light-neutral;
 }
 .tabs > div {
 	padding: 0.5rem;
 	cursor: pointer;
 	display: inline-block;
 	&:hover {
-		background: $light-neutral;
+		background: @light-neutral;
 	}
 }
 .tab.active {
-	color: $primary;
-	background: $light-neutral;
-	border-bottom: 4px solid $primary;
+	color: @primary;
+	background: @light-neutral;
+	border-bottom: 4px solid @primary;
 	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
 }
 .panel {
@@ -301,24 +301,24 @@ form img:hover {
 
 // contact
 .contact-section {
-	background: rgba($primary, 0.4);
+	// background: rgba(@primary, 0.4);
 	span {
-		color: $primary;
+		color: @primary;
 		font-weight: 100;
 		font-size: 1.5rem;
 		font-weight: thin;
 		padding-bottom: 0.3rem;
-		border-bottom: 1px solid $primary;
+		border-bottom: 1px solid @primary;
 	}
 }
 // 	footer
 footer > div:nth-child(1) {
-	color: $primary;
-	background: $light-neutral;
+	color: @primary;
+	background: @light-neutral;
 }
 footer > div:nth-child(2) {
 	color: white;
-	background: $primary;
+	background: @primary;
 }
 footer > div:nth-child(2) > div:nth-child(1) img {
 	padding: 8px 0;
